@@ -89,7 +89,7 @@ archiveTodo(todoIndex) {
             text: "Edit Todo",
             handler: (inputData)=> {
               let todoText;
-              todoText = inputData.addTodoInput;
+              todoText = inputData.editTodoInput;
               this.todoService.editTodo(todoText, todoIndex);
 
               editTodoAlert.onDidDismiss(()=> {

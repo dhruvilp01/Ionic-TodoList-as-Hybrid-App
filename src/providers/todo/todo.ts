@@ -38,4 +38,14 @@ archiveTodo(todoIndex) {
     this.todos[todoIndex] = todo;
   }
 
+  redoTodo(todoIndex) {
+    let todoToBeArchived = this.archiveTodos[todoIndex];
+    this.archiveTodos.splice(todoIndex, 1);
+    this.todos.push(todoToBeArchived);
+  }
+
+  archiveddelete(todoIndex) {
+    this.archiveTodos.splice(todoIndex, 1);
+  }
+
 }

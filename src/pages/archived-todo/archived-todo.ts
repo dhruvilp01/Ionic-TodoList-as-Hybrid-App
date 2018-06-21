@@ -25,4 +25,11 @@ public archiveTodos = [];
     this.archiveTodos = this.todoService.getArchiveTodos();
   }
 
+  archiveTodo(todoIndex) {
+    this.todoService.archiveddelete(todoIndex);
+  }
+
+  editTodo(todoIndex) {
+    this.todoService.redoTodo(todoIndex);
+  }
 }

@@ -10,16 +10,32 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TodoProvider {
   private todos = [];
+  private archiveTodos = [];
+
   constructor(public http: HttpClient) {
     console.log('Hello TodoProvider Provider');
   }
+
+archiveTodo(todoIndex) {
+  let todoToBeArchived = this.todos[todoIndex];
+  this.todos.splice(todoIndex, 1);
+  this.archiveTodos.push(todoToBeArchived);
+}
 
   getTodos() {
     return this.todos;
   }
 
+  getArchiveTodos() {
+    return this.archiveTodos;
+  }
+
   addTodo(todo) {
     this.todos.push(todo);
+  }
+
+  editTodo(todo, todoIndex) {
+    this.todos[todoIndex] = todo;
   }
 
 }

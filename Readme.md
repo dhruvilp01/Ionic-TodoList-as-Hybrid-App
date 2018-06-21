@@ -8,6 +8,9 @@ In this, My feature included as
 	Edit / Delete
 	Re-ordering
 	Archive TodoList
+	Redo From Archive
+	Delete forever from Archive
+	Added the App Icon
 	And Many more.
 
 This will work all there platform
